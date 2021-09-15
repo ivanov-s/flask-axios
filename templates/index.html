@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="/callback" id="form1" method="post">
+        {{ form.csrf_token }}
+        {{ form.name.label }} {{ form.name() }}
+        {{ form.phone.label }} {{ form.phone() }}
+        <input type="submit" value="Отправить"/>
+    </form>
+    <div id="msg"></div>
+{% endblock %}
+
+{% block scripts%}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/callback.js') }}"></script>
+{% endblock %}
+
