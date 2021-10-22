@@ -1,4 +1,4 @@
-# для запуска выполнить в терминале
+# Для запуска выполнить в терминале
 python3 -m venv venv
 
 source venv/bin/activate
